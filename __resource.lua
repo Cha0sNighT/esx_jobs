@@ -25,5 +25,8 @@ client_scripts {
   'jobs/reporter.lua',
   'jobs/slaughterer.lua',
   'jobs/textil.lua',
+  'jobs/brewer.lua',
+  'jobs/tobacco.lua',
+  'jobs/chemist.lua',
   'client/esx_jobs_cl.lua'
 }

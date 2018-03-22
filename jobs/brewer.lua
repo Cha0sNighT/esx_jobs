@@ -1,7 +1,7 @@
-Config.Jobs.lumberjack = {
+Config.Jobs.brewer = {
   BlipInfos = {
-    Sprite = 237,
-    Color = 4
+    Sprite = 93,
+    Color = 46
   },
   Vehicles = {
     Truck = {
@@ -13,30 +13,30 @@ Config.Jobs.lumberjack = {
   },
   Zones = {
     CloakRoom = {
-      Pos = {x = 1200.63, y = -1276.875, z = 34.39},
+      Pos = {x = 849.65, y = -1995.32, z = 28.99},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 204, g = 204, b = 0},
       Marker = 27,
       Blip = true,
-      Name = _U('lj_locker_room'),
+      Name = _U('b_locker_room'),
       Type = "cloakroom",
       Hint = _U('cloak_change'),
     },
 
-    Wood = {
-      Pos = {x = -534.323669433594, y = 5373.794921875, z = 69.513059387207},
+    Malt = {
+      Pos = {x = 2905.95, y = 4382.03, z = 49.34},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 204, g = 204, b = 0},
       Marker = 27,
       Blip = true,
-      Name = _U('lj_mapblip'),
+      Name = _U('b_blip_malt'),
       Type = "work",
       Item = {
         {
-          name = _U('lj_wood'),
-          db_name = "wood",
+          name = _U('b_malt'),
+          db_name = "malt",
           time = 3000,
-          max = 20,
+          max = 50,
           add = 1,
           remove = 1,
           requires = "nothing",
@@ -44,59 +44,59 @@ Config.Jobs.lumberjack = {
           drop = 100
         }
       },
-      Hint = _U('lj_pickup')
+      Hint = _U('b_pickup_malt')
     },
 
-    CuttedWood = {
-      Pos = {x = -552.214660644531, y = 5326.90966796875, z = 72.6096017456055},
+    Melange = {
+      Pos = {x = 406.32, y = 6463.47, z = 27.82},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 204, g = 204, b = 0},
       Marker = 27,
       Blip = true,
-      Name = _U('lj_cutwood'),
+      Name = _U('b_blip_melange'),
       Type = "work",
       Item = {
         {
-          name = _U('lj_cutwood'),
-          db_name = "cutted_wood",
-          time = 5000,
-          max = 20,
-          add = 1,
+          name = _U('b_melange'),
+          db_name = "melange",
+          time = 3000,
+          max = 100,
+          add = 2,
           remove = 1,
-          requires = "wood",
-          requires_name = _U('lj_wood'),
+          requires = "malt",
+          requires_name = _U('b_malt'),
           drop = 100
         }
       },
-      Hint = _U('lj_cutwood_button')
+      Hint = _U('b_pickup_melange')
     },
 
-    Planks = {
-      Pos = {x = -501.386596679688, y = 5280.53076171875, z = 79.6287744140625},
+    Beer = {
+      Pos = {x = 837.66, y = -1934.71, z = 27.98},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 204, g = 204, b = 0},
       Marker = 27,
       Blip = true,
-      Name = _U('lj_board'),
+      Name = _U('b_blip_beer'),
       Type = "work",
       Item = {
         {
-          name = _U('lj_planks'),
-          db_name = "packaged_plank",
+          name = _U('b_beer'),
+          db_name = "beer",
           time = 4000,
           max = 100,
-          add = 5,
+          add = 1,
           remove = 1,
-          requires = "cutted_wood",
-          requires_name = _U('lj_cutwood'),
+          requires = "melange",
+          requires_name = _U('b_melange'),
           drop = 100
         }
       },
-      Hint = _U('lj_pick_boards')
+      Hint = _U('b_pick_beer')
     },
 
     VehicleSpawner = {
-      Pos = {x = 1191.9681396484, y = -1261.7775878906, z = 34.190627593994},
+      Pos = {x = 842.59, y = -1991.21, z = 28.31},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 204, g = 204, b = 0},
       Marker = 27,
@@ -104,23 +104,23 @@ Config.Jobs.lumberjack = {
       Name = _U('spawn_veh'),
       Type = "vehspawner",
       Spawner = 1,
-      Hint = _U('spawn_veh_button'),
+      Hint = _U('spawn_truck_button'),
       Caution = 2000
     },
 
     VehicleSpawnPoint = {
-      Pos = {x = 1194.6257324219, y = -1286.955078125, z = 34.121524810791},
+      Pos = {x = 835.51, y = -1969.04, z = 28.30},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Marker = -1,
       Blip = false,
       Name = _U('service_vh'),
       Type = "vehspawnpt",
       Spawner = 1,
-      Heading = 285.1
+      Heading = 20.5
     },
 
     VehicleDeletePoint = {
-      Pos = {x = 1216.8983154297, y = -1229.2396240234, z = 34.413507232666},
+      Pos = {x = 850.87, y = -1988.39, z = 28.31},
       Size = {x = 5.0, y = 5.0, z = 1.0},
       Color = {r = 255, g = 0, b = 0},
       Marker = 27,
@@ -135,12 +135,12 @@ Config.Jobs.lumberjack = {
     },
 
     Delivery = {
-      Pos = {x = 1201.3558349609, y = -1327.5159912109, z = 34.236093292236},
+      Pos = {x = -558.84, y = 301.91, z = 82.20},
       Color = {r = 204, g = 204, b = 0},
       Size = {x = 5.0, y = 5.0, z = 3.0},
       Marker = 27,
       Blip = true,
-      Name = _U('lj_deliver_button_blip'),
+      Name = _U('b_deliver_button_blip'),
       Type = "delivery",
       Spawner = 1,
       Item = {
@@ -149,13 +149,13 @@ Config.Jobs.lumberjack = {
           time = 500,
           remove = 1,
           max = 100, -- if not present, probably an error at itemQtty >= item.max in esx_jobs_sv.lua
-          price = 13,
-          requires = "packaged_plank",
-          requires_name = _U('lj_planks'),
+          price = 15,
+          requires = "beer",
+          requires_name = _U('b_beer'),
           drop = 100
         }
       },
-      Hint = _U('lj_deliver_button')
+      Hint = _U('b_deliver_button')
     }
   }
 }

@@ -1,42 +1,45 @@
-Config.Jobs.lumberjack = {
+Config.Jobs.tobacco = {
   BlipInfos = {
-    Sprite = 237,
-    Color = 4
+    Sprite = 79,
+    Color = 5
   },
+
   Vehicles = {
     Truck = {
       Spawner = 1,
-      Hash = "pounder",
+      Hash = "pony2",
       Trailer = "none",
       HasCaution = true
     }
   },
+
   Zones = {
     CloakRoom = {
-      Pos = {x = 1200.63, y = -1276.875, z = 34.39},
+      Pos = {x = 367.81, y = 351.2, z = 102.14},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 204, g = 204, b = 0},
       Marker = 27,
       Blip = true,
-      Name = _U('lj_locker_room'),
+      Name = _U('t_locker'),
       Type = "cloakroom",
       Hint = _U('cloak_change'),
+      GPS = {x = 367.81, y = 351.2, z = 102.14}
     },
 
-    Wood = {
-      Pos = {x = -534.323669433594, y = 5373.794921875, z = 69.513059387207},
+    Feuilles = {
+      Pos = {x = 407.62, y = 6496.1, z = 26.89},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 204, g = 204, b = 0},
       Marker = 27,
       Blip = true,
-      Name = _U('lj_mapblip'),
+      Name = _U('t_blip_feuilles'),
       Type = "work",
       Item = {
         {
-          name = _U('lj_wood'),
-          db_name = "wood",
+          name = _U('t_feuilles'),
+          db_name = "feuilletabac",
           time = 3000,
-          max = 20,
+          max = 100,
           add = 1,
           remove = 1,
           requires = "nothing",
@@ -44,59 +47,62 @@ Config.Jobs.lumberjack = {
           drop = 100
         }
       },
-      Hint = _U('lj_pickup')
+      Hint = _U('t_pickup'),
+      GPS = {x = 407.62, y = 6496.1, z = 26.89}
     },
 
-    CuttedWood = {
-      Pos = {x = -552.214660644531, y = 5326.90966796875, z = 72.6096017456055},
+    Seche = {
+      Pos = {x = 2.77, y = 6425.41, z = 30.44},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 204, g = 204, b = 0},
       Marker = 27,
       Blip = true,
-      Name = _U('lj_cutwood'),
+      Name = _U('t_blip_seche'),
       Type = "work",
       Item = {
         {
-          name = _U('lj_cutwood'),
-          db_name = "cutted_wood",
+          name = _U('t_seche'),
+          db_name = "tabac",
           time = 5000,
-          max = 20,
+          max = 100,
           add = 1,
           remove = 1,
-          requires = "wood",
-          requires_name = _U('lj_wood'),
+          requires = "feuilletabac",
+          requires_name = _U('t_feuilles'),
           drop = 100
         }
       },
-      Hint = _U('lj_cutwood_button')
+      Hint = _U('t_makeseche'),
+      GPS = {x = 2.77, y = 6425.41, z = 30.44}
     },
 
-    Planks = {
-      Pos = {x = -501.386596679688, y = 5280.53076171875, z = 79.6287744140625},
+    Cigarette = {
+      Pos = {x = -225.4, y = -2656.05, z = 5.01},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 204, g = 204, b = 0},
       Marker = 27,
       Blip = true,
-      Name = _U('lj_board'),
+      Name = _U('t_blip_cigarettes'),
       Type = "work",
       Item = {
         {
-          name = _U('lj_planks'),
-          db_name = "packaged_plank",
+          name = _U('t_cigarettes'),
+          db_name = "cigarett",
           time = 4000,
           max = 100,
-          add = 5,
+          add = 1,
           remove = 1,
-          requires = "cutted_wood",
-          requires_name = _U('lj_cutwood'),
+          requires = "tabac",
+          requires_name = _U('t_seche'),
           drop = 100
         }
       },
-      Hint = _U('lj_pick_boards')
+      Hint = _U('t_fabric'),
+      GPS = {x = -225.4, y = -2656.05, z = 5.01}
     },
 
     VehicleSpawner = {
-      Pos = {x = 1191.9681396484, y = -1261.7775878906, z = 34.190627593994},
+      Pos = {x = 367.06, y = 347.16, z = 102.20},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 204, g = 204, b = 0},
       Marker = 27,
@@ -105,23 +111,25 @@ Config.Jobs.lumberjack = {
       Type = "vehspawner",
       Spawner = 1,
       Hint = _U('spawn_veh_button'),
-      Caution = 2000
+      Caution = 2000,
+      GPS = {x = 367.06, y = 347.16, z = 102.20}
     },
 
     VehicleSpawnPoint = {
-      Pos = {x = 1194.6257324219, y = -1286.955078125, z = 34.121524810791},
+      Pos = {x = 368.12, y = 339.62, z = 103.25},
       Size = {x = 3.0, y = 3.0, z = 1.0},
       Marker = -1,
       Blip = false,
       Name = _U('service_vh'),
       Type = "vehspawnpt",
       Spawner = 1,
-      Heading = 285.1
+      Heading = 163.5,
+      GPS = 0
     },
 
     VehicleDeletePoint = {
-      Pos = {x = 1216.8983154297, y = -1229.2396240234, z = 34.413507232666},
-      Size = {x = 5.0, y = 5.0, z = 1.0},
+      Pos = {x = 371.86, y = 355.77, z = 101.64},
+      Size = {x = 3.0, y = 3.0, z = 1.0},
       Color = {r = 255, g = 0, b = 0},
       Marker = 27,
       Blip = false,
@@ -135,12 +143,12 @@ Config.Jobs.lumberjack = {
     },
 
     Delivery = {
-      Pos = {x = 1201.3558349609, y = -1327.5159912109, z = 34.236093292236},
+      Pos = {x = 377.89, y = 332.68, z = 102.58},
       Color = {r = 204, g = 204, b = 0},
       Size = {x = 5.0, y = 5.0, z = 3.0},
       Marker = 27,
       Blip = true,
-      Name = _U('lj_deliver_button_blip'),
+      Name = _U('t_deliver_tobacco_blip'),
       Type = "delivery",
       Spawner = 1,
       Item = {
@@ -149,13 +157,14 @@ Config.Jobs.lumberjack = {
           time = 500,
           remove = 1,
           max = 100, -- if not present, probably an error at itemQtty >= item.max in esx_jobs_sv.lua
-          price = 13,
-          requires = "packaged_plank",
-          requires_name = _U('lj_planks'),
+          price = 12,
+          requires = "cigarett",
+          requires_name = _U('t_cigarettes'),
           drop = 100
         }
       },
-      Hint = _U('lj_deliver_button')
+      Hint = _U('t_deliver_tobacco'),
+      GPS = {x = 377.89, y = 332.68, z = 102.58}
     }
   }
 }
