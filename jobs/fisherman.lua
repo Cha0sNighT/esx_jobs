@@ -14,7 +14,7 @@ Config.Jobs.fisherman = {
 			Spawner = 2,
 			Hash = "tug",
 			Trailer = "none",
-			HasCaution = false
+			HasCaution = true
 		}
 	},
 	Zones = {
@@ -65,7 +65,7 @@ Config.Jobs.fisherman = {
 			Type  = "vehspawner",
 			Spawner = 2,
 			Hint  = _U('fm_spawnboat'),
-			Caution = 0,
+			Caution = 250,
 			GPS = {x = 4435.21, y = 4829.6, z = 0.3439}
 		},
 
@@ -91,7 +91,7 @@ Config.Jobs.fisherman = {
 			Type  = "vehdelete",
 			Hint  = _U('fm_boat_return_button'),
 			Spawner = 2,
-			Caution = 0,
+			Caution = 250,
 			GPS = {x = -1012.64758300781, y = -1354.62634277344, z = 5.54292726516724},
 			Teleport = {x = 3867.44, y = 4463.62, z = 1.72386}
 		},
